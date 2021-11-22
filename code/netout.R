@@ -5,7 +5,7 @@ pacman::p_load(usethis,pacman,rio,ggplot2,ggthemes,quantmod,dplyr,data.table,lub
 netout <- read.csv("https://raw.githubusercontent.com/taylorshiroff/labor-force-doom/main/net_out.csv")
 
 theme_apricitas <- theme_ft_rc() +
-  theme(axis.line = element_line(colour = "white"),legend.position = c(.90,.90),legend.text = element_text(size = 14, color = "white")) #using the FT theme and white axis lines for a "theme_apricitas"
+  theme(axis.line = element_line(colour = "white"),legend.position = c(.90,.90),legend.text = element_text(size = 14, color = "white"), plot.title = element_text(size = 28, color = "white")) #using the FT theme and white axis lines for a "theme_apricitas"
 
 apricitas_logo <- image_read("https://github.com/Miles-byte/Apricitas/blob/main/Logo.png?raw=true") #downloading and rasterizing Apricitas Logo from github
 apricitas_logo_rast <- rasterGrob(apricitas_logo, interpolate=TRUE)
