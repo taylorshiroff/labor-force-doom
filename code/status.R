@@ -28,9 +28,7 @@ types_chart <- ggplot(types2, aes(x=as.Date(date), y=value, fill=variable)) + #p
   annotation_custom(apricitas_logo_rast, xmin = as.Date("2019-01-01")-(.1861*1004), xmax = as.Date("2019-01-01")-(0.049*1004), ymin = 0-(.3*35000), ymax = 0) +
   coord_cartesian(clip = "off")
 
-types_chart
-
-ggsave(dpi = "retina",plot = netout_chart, "status.png", type = "cairo-png") #CAIRO GETS RID OF THE ANTI ALIASING ISSUE
+ggsave(dpi = "retina",plot = types_chart, "status.png", type = "cairo-png") #CAIRO GETS RID OF THE ANTI ALIASING ISSUE
 
 
 p_unload(all)  # Remove all add-ons
